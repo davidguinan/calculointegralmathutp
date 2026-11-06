@@ -18,7 +18,9 @@ export function Modulo2() {
         </TexBlock>
         <p>Al sumar todos los trapecios, los nodos interiores aparecen dos veces:</p>
         <TexBlock boxed>
-          {"T_n = \\frac{h}{2}\\Big[f(x_0) + 2f(x_1) + 2f(x_2) + \\cdots + 2f(x_{n-1}) + f(x_n)\\Big]"}
+          {
+            "T_n = \\frac{h}{2}\\Big[f(x_0) + 2f(x_1) + 2f(x_2) + \\cdots + 2f(x_{n-1}) + f(x_n)\\Big]"
+          }
         </TexBlock>
         <p>
           <strong>Error:</strong> si <Tex>{"|f''(x)| \\le K"}</Tex> en <Tex>{"[a,b]"}</Tex>,
@@ -69,7 +71,7 @@ export function Modulo2() {
             { label: "Operar", tex: "T_4 = 0.125\\,(5.5762) \\approx 0.697024" },
             { label: "Comparar", tex: "\\ln 2 \\approx 0.693147" },
           ]}
-          result="T_4 \\approx 0.6970 \\quad (\\text{error} \\approx 3.9\\times10^{-3})"
+          result={"T_4 \\approx 0.6970 \\quad (\\text{error} \\approx 3.9\\times10^{-3})"}
         />
       </Section>
     </>
