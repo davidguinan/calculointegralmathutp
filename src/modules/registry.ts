@@ -63,8 +63,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Sustitución / Potencias",
     summary: "Método de sustitución y la regla de la potencia generalizada.",
     tags: ["sustitución"],
-    status: "proximamente",
-    fase: "Fase 2",
+    status: "activo",
   },
   {
     id: 8,
@@ -72,8 +71,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Integrales Exponenciales",
     summary: "Integrales con base e y bases arbitrarias.",
     tags: ["exponencial"],
-    status: "proximamente",
-    fase: "Fase 2",
+    status: "activo",
   },
   {
     id: 9,
@@ -81,8 +79,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Integrales Logarítmicas",
     summary: "Formas que conducen al logaritmo natural.",
     tags: ["logaritmo"],
-    status: "proximamente",
-    fase: "Fase 2",
+    status: "activo",
   },
   {
     id: 10,
@@ -90,8 +87,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Integrales Trigonométricas",
     summary: "Potencias y productos de funciones trigonométricas.",
     tags: ["trigonometría"],
-    status: "proximamente",
-    fase: "Fase 2",
+    status: "activo",
   },
   {
     id: 11,
@@ -99,8 +95,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Trigonométricas Inversas",
     summary: "Formas que producen arcsen, arctan y arcsec.",
     tags: ["inversas"],
-    status: "proximamente",
-    fase: "Fase 3",
+    status: "activo",
   },
   {
     id: 12,
@@ -108,8 +103,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Hiperbólicas Inversas",
     summary: "Integrales asociadas a arcsinh, arccosh y arctanh.",
     tags: ["hiperbólicas"],
-    status: "proximamente",
-    fase: "Fase 3",
+    status: "activo",
   },
   {
     id: 13,
@@ -117,8 +111,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Trinomio ax² + bx + c",
     summary: "Completación de cuadrados para integrandos cuadráticos.",
     tags: ["trinomio"],
-    status: "proximamente",
-    fase: "Fase 3",
+    status: "activo",
   },
   {
     id: 14,
@@ -126,8 +119,7 @@ export const MODULES: ModuleMeta[] = [
     title: "Integración por Partes",
     summary: "La fórmula ∫u dv = uv − ∫v du y la estrategia LIATE.",
     tags: ["por partes"],
-    status: "proximamente",
-    fase: "Fase 3",
+    status: "activo",
   },
 ];
 
