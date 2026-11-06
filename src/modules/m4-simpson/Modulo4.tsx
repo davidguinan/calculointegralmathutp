@@ -13,13 +13,17 @@ export function Modulo4() {
           parábola necesita tres nodos <Tex>{"(x_{i-1}, x_i, x_{i+1})"}</Tex>.
         </p>
         <TexBlock boxed>
-          {"S_n = \\frac{h}{3}\\Big[f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \\cdots + 4f(x_{n-1}) + f(x_n)\\Big]"}
+          {
+            "S_n = \\frac{h}{3}\\Big[f(x_0) + 4f(x_1) + 2f(x_2) + 4f(x_3) + \\cdots + 4f(x_{n-1}) + f(x_n)\\Big]"
+          }
         </TexBlock>
         <p>
           El patrón de coeficientes es <Tex>{"1, 4, 2, 4, 2, \\ldots, 4, 1"}</Tex>: índices impares
           llevan 4 e índices pares interiores llevan 2.
         </p>
-        <TexBlock boxed>{"|E_S| \\le \\frac{K (b-a)^5}{180 n^4}, \\quad |f^{(4)}(x)| \\le K"}</TexBlock>
+        <TexBlock boxed>
+          {"|E_S| \\le \\frac{K (b-a)^5}{180 n^4}, \\quad |f^{(4)}(x)| \\le K"}
+        </TexBlock>
         <p>
           Al decrecer como <Tex>{"1/n^4"}</Tex>, Simpson es exacta para polinomios de grado{" "}
           <Tex>{"\\le 3"}</Tex>.
@@ -43,7 +47,7 @@ export function Modulo4() {
             },
             { label: "Operar", tex: "S_4 = \\frac{0.5}{3}(16) = \\frac{8}{3}" },
           ]}
-          result="S_4 = \\frac{8}{3} \\approx 2.666667 \\quad (\\text{error} = 0)"
+          result={"S_4 = \\frac{8}{3} \\approx 2.666667 \\quad (\\text{error} = 0)"}
         />
         <Example
           title="Ejemplo 2 — ∫₁² (1/x) dx con n = 4"
@@ -61,7 +65,7 @@ export function Modulo4() {
             { label: "Operar", tex: "S_4 = \\frac{0.25}{3}(8.318048) \\approx 0.693254" },
             { label: "Comparar", tex: "\\ln 2 \\approx 0.693147" },
           ]}
-          result="S_4 \\approx 0.693254 \\quad (\\text{error} \\approx 1.1\\times10^{-4})"
+          result={"S_4 \\approx 0.693254 \\quad (\\text{error} \\approx 1.1\\times10^{-4})"}
         />
       </Section>
     </>
