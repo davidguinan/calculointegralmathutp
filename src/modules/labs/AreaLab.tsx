@@ -24,7 +24,7 @@ export function AreaLab() {
           const pts: string[] = [`${s.sx(a)},${s.sy(0)}`];
           for (let k = 0; k <= 120; k++) {
             const x = a + ((b - a) * k) / 120;
-            pts.push(`${s.sx(x)},${s.sy(fn.f(x))}`);
+            pts.push(`${s.sx(x).toFixed(2)},${s.sy(fn.f(x)).toFixed(2)}`);
           }
           pts.push(`${s.sx(b)},${s.sy(0)}`);
           return (

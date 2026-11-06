@@ -74,7 +74,11 @@ export function TrapezoidLab() {
         <SliderField label="n (trapecios)" min={1} max={100} value={n} onChange={setN} />
         <Stat label="Regla del trapecio" value={value.toFixed(6)} tone="accent" />
         <Stat label="Valor exacto" value={exact.toFixed(6)} />
-        <Stat label="Error absoluto" value={Math.abs(exact - value).toExponential(3)} tone="success" />
+        <Stat
+          label="Error absoluto"
+          value={Math.abs(exact - value).toExponential(3)}
+          tone="success"
+        />
       </div>
     </div>
   );

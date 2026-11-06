@@ -30,7 +30,6 @@ export function SimpsonLab() {
     return out;
   }, [fn, a, h, n]);
 
-
   const onFn = (id: string) => {
     const nf = getFunction(id);
     setFnId(id);
@@ -105,7 +104,11 @@ export function SimpsonLab() {
         />
         <Stat label="Regla de Simpson" value={value.toFixed(8)} tone="accent" />
         <Stat label="Valor exacto" value={exact.toFixed(8)} />
-        <Stat label="Error absoluto" value={Math.abs(exact - value).toExponential(3)} tone="success" />
+        <Stat
+          label="Error absoluto"
+          value={Math.abs(exact - value).toExponential(3)}
+          tone="success"
+        />
       </div>
     </div>
   );

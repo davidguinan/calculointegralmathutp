@@ -33,11 +33,7 @@ export function RectanglesLab({
 
   return (
     <div className="grid gap-5 lg:grid-cols-[1fr_260px]">
-      <Plot
-        f={fn.f}
-        domain={[a, b]}
-        caption={`n = ${n} subintervalos, ancho Δx = ${h.toFixed(4)}`}
-      >
+      <Plot f={fn.f} domain={[a, b]} caption={`n = ${n} subintervalos, ancho Δx = ${h.toFixed(4)}`}>
         {(s) => (
           <g>
             {bars.map((bar, i) => {
