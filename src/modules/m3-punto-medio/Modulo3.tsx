@@ -9,7 +9,8 @@ export function Modulo3() {
       <Section title="La regla del punto medio" eyebrow="Teoría">
         <p>
           Se usan rectángulos cuya altura se toma en el centro de cada subintervalo. Con{" "}
-          <Tex>{"h = \\frac{b-a}{n}"}</Tex> y <Tex>{"\\bar{x}_i = a + \\left(i - \\tfrac{1}{2}\\right)h"}</Tex>:
+          <Tex>{"h = \\frac{b-a}{n}"}</Tex> y{" "}
+          <Tex>{"\\bar{x}_i = a + \\left(i - \\tfrac{1}{2}\\right)h"}</Tex>:
         </p>
         <TexBlock boxed>{"M_n = h\\sum_{i=1}^{n} f(\\bar{x}_i)"}</TexBlock>
         <p>
@@ -56,9 +57,12 @@ export function Modulo3() {
             },
             { label: "Imágenes", tex: "0.382683,\\;0.923880,\\;0.923880,\\;0.382683" },
             { label: "Sumar", tex: "\\sum f(\\bar{x}_i) = 2.613126" },
-            { label: "Multiplicar por h", tex: "M_4 = 0.785398 \\times 2.613126 \\approx 2.052344" },
+            {
+              label: "Multiplicar por h",
+              tex: "M_4 = 0.785398 \\times 2.613126 \\approx 2.052344",
+            },
           ]}
-          result="M_4 \\approx 2.0523 \\quad (\\text{error} \\approx 0.0523)"
+          result={"M_4 \\approx 2.0523 \\quad (\\text{error} \\approx 0.0523)"}
         />
       </Section>
     </>
