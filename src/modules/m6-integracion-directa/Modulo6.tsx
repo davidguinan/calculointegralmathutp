@@ -27,7 +27,9 @@ export function Modulo6() {
           arreglo algebraico) con una fórmula elemental. Se apoya en dos propiedades:
         </p>
         <TexBlock boxed>
-          {"\\int k\\,f(x)\\,dx = k\\!\\int f(x)\\,dx, \\qquad \\int [f(x)\\pm g(x)]\\,dx = \\int f(x)\\,dx \\pm \\int g(x)\\,dx"}
+          {
+            "\\int k\\,f(x)\\,dx = k\\!\\int f(x)\\,dx, \\qquad \\int [f(x)\\pm g(x)]\\,dx = \\int f(x)\\,dx \\pm \\int g(x)\\,dx"
+          }
         </TexBlock>
         <div className="grid gap-3 sm:grid-cols-2">
           {FORMULAS.map(([lhs, rhs]) => (
@@ -66,7 +68,7 @@ export function Modulo6() {
             },
             { label: "Simplificar y agregar C", tex: "\\frac{3x^5}{5} - x^2 + 5x + C" },
           ]}
-          result="\\int (3x^4-2x+5)\\,dx = \\frac{3x^5}{5} - x^2 + 5x + C"
+          result={"\\int (3x^4-2x+5)\\,dx = \\frac{3x^5}{5} - x^2 + 5x + C"}
         />
         <Example
           title="Ejemplo 2 — ∫ (√x + 1/x²) dx"
@@ -79,7 +81,9 @@ export function Modulo6() {
             },
             { label: "Simplificar", tex: "\\frac{2}{3}x^{3/2} - \\frac{1}{x} + C" },
           ]}
-          result="\\int \\left(\\sqrt{x} + \\tfrac{1}{x^2}\\right)dx = \\frac{2}{3}x^{3/2} - \\frac{1}{x} + C"
+          result={
+            "\\int \\left(\\sqrt{x} + \\tfrac{1}{x^2}\\right)dx = \\frac{2}{3}x^{3/2} - \\frac{1}{x} + C"
+          }
         />
         <Example
           title="Ejemplo 3 — ∫₀^{π/4} (sec²x + 2cos x) dx"
@@ -93,7 +97,7 @@ export function Modulo6() {
             { label: "Evaluar en 0", tex: "\\tan 0 + 2\\sin 0 = 0" },
             { label: "Restar", tex: "(1+\\sqrt{2}) - 0" },
           ]}
-          result="\\int_0^{\\pi/4}(\\sec^2x + 2\\cos x)\\,dx = 1 + \\sqrt{2} \\approx 2.4142"
+          result={"\\int_0^{\\pi/4}(\\sec^2x + 2\\cos x)\\,dx = 1 + \\sqrt{2} \\approx 2.4142"}
         />
       </Section>
     </>
