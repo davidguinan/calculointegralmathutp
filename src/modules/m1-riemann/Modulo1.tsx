@@ -8,14 +8,14 @@ export function Modulo1() {
     <>
       <Section title="¿Qué es una suma de Riemann?" eyebrow="Teoría">
         <p>
-          Para aproximar el área bajo la curva de <Tex>{"f"}</Tex> en <Tex>{"[a,b]"}</Tex>{" "}
-          dividimos el intervalo en <Tex>{"n"}</Tex> subintervalos de ancho
+          Para aproximar el área bajo la curva de <Tex>{"f"}</Tex> en <Tex>{"[a,b]"}</Tex> dividimos
+          el intervalo en <Tex>{"n"}</Tex> subintervalos de ancho
         </p>
         <TexBlock boxed>{"\\Delta x = \\frac{b-a}{n}, \\qquad x_i = a + i\\,\\Delta x"}</TexBlock>
         <p>
           En cada subintervalo <Tex>{"[x_{i-1}, x_i]"}</Tex> elegimos un punto muestra{" "}
-          <Tex>{"x_i^{*}"}</Tex> y construimos un rectángulo de altura <Tex>{"f(x_i^{*})"}</Tex>.
-          La suma de sus áreas es la suma de Riemann:
+          <Tex>{"x_i^{*}"}</Tex> y construimos un rectángulo de altura <Tex>{"f(x_i^{*})"}</Tex>. La
+          suma de sus áreas es la suma de Riemann:
         </p>
         <TexBlock boxed>{"S_n = \\sum_{i=1}^{n} f(x_i^{*})\\,\\Delta x"}</TexBlock>
         <div className="grid gap-4 md:grid-cols-3">
@@ -78,13 +78,16 @@ export function Modulo1() {
               tex: "\\int_0^2 x^2\\,dx = \\frac{8}{3} \\approx 2.6667",
             },
           ]}
-          result="R_4 = 3.75 \\quad (\\text{error} \\approx 1.0833)"
+          result={"R_4 = 3.75 \\quad (\\text{error} \\approx 1.0833)"}
         />
         <Example
           title="Ejemplo 2 — Límite de la suma de Riemann de f(x) = x² en [0, 1]"
           statement="Calcula la integral exacta como límite de la suma derecha."
           steps={[
-            { label: "Partición uniforme", tex: "\\Delta x = \\frac{1}{n}, \\quad x_i = \\frac{i}{n}" },
+            {
+              label: "Partición uniforme",
+              tex: "\\Delta x = \\frac{1}{n}, \\quad x_i = \\frac{i}{n}",
+            },
             {
               label: "Armar la suma",
               tex: "S_n = \\sum_{i=1}^{n} \\left(\\frac{i}{n}\\right)^2 \\frac{1}{n} = \\frac{1}{n^3}\\sum_{i=1}^{n} i^2",
@@ -102,7 +105,7 @@ export function Modulo1() {
               tex: "\\lim_{n\\to\\infty} S_n = \\frac{2}{6} = \\frac{1}{3}",
             },
           ]}
-          result="\\int_0^1 x^2\\,dx = \\frac{1}{3}"
+          result={"\\int_0^1 x^2\\,dx = \\frac{1}{3}"}
         />
       </Section>
     </>
