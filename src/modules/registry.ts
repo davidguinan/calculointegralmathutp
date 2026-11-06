@@ -121,6 +121,14 @@ export const MODULES: ModuleMeta[] = [
     tags: ["por partes"],
     status: "activo",
   },
+  {
+    id: 15,
+    slug: "arena-integral",
+    title: "Arena Integral (juego)",
+    summary: "Combate en tiempo real: responde preguntas de los 14 módulos para ganar poderes.",
+    tags: ["juego", "repaso", "2 jugadores"],
+    status: "activo",
+  },
 ];
 
 export const getModule = (slug: string) => MODULES.find((m) => m.slug === slug);
