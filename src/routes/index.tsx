@@ -1,19 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ArrowRight, BookOpen, Clock, Search, Sparkles } from "lucide-react";
+import { ArrowRight, BookOpen, Clock, Search, Sparkles, Swords } from "lucide-react";
 import { Shell } from "@/components/site/Shell";
 import { MODULES } from "@/modules/registry";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cálculo Integral UTP — 14 módulos interactivos" },
+      { title: "Cálculo Integral UTP — 14 módulos interactivos y un juego" },
       {
         name: "description",
         content:
           "Curso interactivo de Cálculo Integral de la UTP: métodos numéricos, integral definida, sustitución, exponenciales, logaritmos, trigonométricas, inversas, trinomios e integración por partes.",
       },
-      { property: "og:title", content: "Cálculo Integral UTP — 14 módulos interactivos" },
+      {
+        property: "og:title",
+        content: "Cálculo Integral UTP — 14 módulos interactivos y un juego",
+      },
       {
         property: "og:description",
         content:
@@ -44,8 +47,6 @@ function Index() {
     });
   }, [q, filter]);
 
-  const activos = MODULES.filter((m) => m.status === "activo").length;
-
   return (
     <Shell>
       <section className="border-b border-border bg-secondary/40 paper-grid">
@@ -58,8 +59,8 @@ function Index() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
             14 módulos con teoría en notación matemática real, visualizadores interactivos y
-            ejemplos resueltos paso a paso. {activos} de {MODULES.length} módulos activos, cada uno
-            con laboratorio y autoevaluación.
+            ejemplos resueltos paso a paso, cada uno con laboratorio y autoevaluación. Además, la
+            Arena Integral: un juego de combate donde ganas poderes respondiendo preguntas.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -75,6 +76,13 @@ function Index() {
             >
               Ver todos los módulos
             </a>
+            <Link
+              to="/modulo/$slug"
+              params={{ slug: "arena-integral" }}
+              className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
+            >
+              <Swords className="size-4" /> Jugar Arena Integral
+            </Link>
           </div>
         </div>
       </section>
