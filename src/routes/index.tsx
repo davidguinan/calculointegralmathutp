@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Curso interactivo de Cálculo Integral de la UTP: sumas de Riemann, trapecio, punto medio, Simpson, integral definida e integración directa.",
+          "Curso interactivo de Cálculo Integral de la UTP: métodos numéricos, integral definida, sustitución, exponenciales, logaritmos, trigonométricas, inversas, trinomios e integración por partes.",
       },
       { property: "og:title", content: "Cálculo Integral UTP — 14 módulos interactivos" },
       {
@@ -58,7 +58,8 @@ function Index() {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
             14 módulos con teoría en notación matemática real, visualizadores interactivos y
-            ejemplos resueltos paso a paso. {activos} módulos activos hoy.
+            ejemplos resueltos paso a paso. {activos} de {MODULES.length} módulos activos, cada uno
+            con laboratorio y autoevaluación.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link
@@ -96,17 +97,19 @@ function Index() {
                 ["activo", "Activos"],
                 ["proximamente", "Próximamente"],
               ] as const
-            ).map(([k, label]) => (
-              <button
-                key={k}
-                onClick={() => setFilter(k)}
-                className={`rounded-md px-3 py-1.5 transition-colors ${
-                  filter === k ? "bg-primary text-primary-foreground" : "hover:bg-background/70"
-                }`}
-              >
-                {label}
-              </button>
-            ))}
+            )
+              .filter(([k]) => k !== "proximamente" || MODULES.some((m) => m.status === k))
+              .map(([k, label]) => (
+                <button
+                  key={k}
+                  onClick={() => setFilter(k)}
+                  className={`rounded-md px-3 py-1.5 transition-colors ${
+                    filter === k ? "bg-primary text-primary-foreground" : "hover:bg-background/70"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
           </div>
         </div>
 
