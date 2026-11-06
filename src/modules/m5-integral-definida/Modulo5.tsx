@@ -7,9 +7,7 @@ export function Modulo5() {
   return (
     <>
       <Section title="Teorema Fundamental del Cálculo" eyebrow="Teoría">
-        <p>
-          El TFC conecta las dos ideas centrales del curso: la derivada y el área acumulada.
-        </p>
+        <p>El TFC conecta las dos ideas centrales del curso: la derivada y el área acumulada.</p>
         <div className="grid gap-4 md:grid-cols-2">
           <Card>
             <h3 className="font-semibold">Primera parte</h3>
@@ -17,9 +15,7 @@ export function Modulo5() {
               Si <Tex>{"f"}</Tex> es continua en <Tex>{"[a,b]"}</Tex>, la función de área es
               derivable y su derivada es <Tex>{"f"}</Tex>.
             </p>
-            <TexBlock>
-              {"g(x) = \\int_a^x f(t)\\,dt \\;\\Longrightarrow\\; g'(x) = f(x)"}
-            </TexBlock>
+            <TexBlock>{"g(x) = \\int_a^x f(t)\\,dt \\;\\Longrightarrow\\; g'(x) = f(x)"}</TexBlock>
           </Card>
           <Card>
             <h3 className="font-semibold">Segunda parte</h3>
@@ -31,12 +27,14 @@ export function Modulo5() {
         </div>
         <p>Propiedades esenciales de la integral definida:</p>
         <TexBlock boxed>
-          {"\\int_a^b [\\,\\alpha f + \\beta g\\,]\\,dx = \\alpha\\!\\int_a^b f\\,dx + \\beta\\!\\int_a^b g\\,dx, \\qquad \\int_a^b f = \\int_a^c f + \\int_c^b f, \\qquad \\int_a^b f = -\\int_b^a f"}
+          {
+            "\\int_a^b [\\,\\alpha f + \\beta g\\,]\\,dx = \\alpha\\!\\int_a^b f\\,dx + \\beta\\!\\int_a^b g\\,dx, \\qquad \\int_a^b f = \\int_a^c f + \\int_c^b f, \\qquad \\int_a^b f = -\\int_b^a f"
+          }
         </TexBlock>
         <p>
-          <strong>Área vs. integral:</strong> donde <Tex>{"f(x) < 0"}</Tex> la integral es
-          negativa; para el área geométrica se usa <Tex>{"\\int_a^b |f(x)|\\,dx"}</Tex>. Entre dos
-          curvas con <Tex>{"f \\ge g"}</Tex>:
+          <strong>Área vs. integral:</strong> donde <Tex>{"f(x) < 0"}</Tex> la integral es negativa;
+          para el área geométrica se usa <Tex>{"\\int_a^b |f(x)|\\,dx"}</Tex>. Entre dos curvas con{" "}
+          <Tex>{"f \\ge g"}</Tex>:
         </p>
         <TexBlock boxed>{"A = \\int_a^b \\big[f(x) - g(x)\\big]\\,dx"}</TexBlock>
       </Section>
@@ -55,7 +53,7 @@ export function Modulo5() {
             { label: "Evaluar en a", tex: "F(0) = 0" },
             { label: "Restar", tex: "\\int_0^3 (x^2+1)\\,dx = 12 - 0" },
           ]}
-          result="\\int_0^3 (x^2+1)\\,dx = 12"
+          result={"\\int_0^3 (x^2+1)\\,dx = 12"}
         />
         <Example
           title="Ejemplo 2 — Área entre y = x² y y = 2x"
@@ -73,7 +71,7 @@ export function Modulo5() {
             { label: "Antiderivar", tex: "A = \\left[ x^2 - \\frac{x^3}{3} \\right]_0^2" },
             { label: "Evaluar", tex: "A = \\left(4 - \\frac{8}{3}\\right) - 0 = \\frac{4}{3}" },
           ]}
-          result="A = \\frac{4}{3} \\approx 1.3333 \\text{ u}^2"
+          result={"A = \\frac{4}{3} \\approx 1.3333 \\text{ u}^2"}
         />
       </Section>
     </>
