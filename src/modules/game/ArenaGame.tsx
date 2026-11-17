@@ -58,7 +58,7 @@ const saveProgress = (v: number) => {
   }
 };
 
-const ALL_MODULES = Array.from({ length: 14 }, (_, i) => i + 1);
+const ALL_MODULES = Array.from({ length: 16 }, (_, i) => i + 1);
 const P1_NAME = "Jugador 1";
 const P2_NAME = "Jugador 2";
 
@@ -357,7 +357,7 @@ export function ArenaGame() {
                     onChange={(e) => setDuelTopic(Number(e.target.value))}
                     className="mt-1 w-full rounded-md border border-slate-600 bg-slate-900 px-2 py-1.5 text-xs"
                   >
-                    <option value={-1}>Todos los módulos (1–14)</option>
+                    <option value={-1}>Todos los módulos (1–16)</option>
                     {BOSSES.map((b, i) => (
                       <option key={b.name} value={i}>
                         {b.title}

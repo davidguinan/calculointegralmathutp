@@ -518,6 +518,93 @@ export const QUESTIONS: GameQuestion[] = [
     a: 0,
     why: "xeˣ − ∫eˣdx = xeˣ − eˣ.",
   },
+  // Módulo 15 — Aplicaciones
+  {
+    m: 15,
+    q: "Área entre y = x y y = x² en [0, 1]:",
+    options: ["\\tfrac16", "\\tfrac13", "\\tfrac12", "1"],
+    a: 0,
+    why: "∫₀¹ (x − x²) dx = 1/2 − 1/3 = 1/6.",
+  },
+  {
+    m: 15,
+    q: "Para el área entre curvas se integra…",
+    options: [T("arriba − abajo"), T("abajo − arriba"), T("arriba · abajo"), T("arriba + abajo")],
+    a: 0,
+    why: "La altura del rectángulo es la curva superior menos la inferior.",
+  },
+  {
+    m: 15,
+    q: "Valor promedio de f(x) = 2x en [0, 2]:",
+    options: ["2", "4", "1", "8"],
+    a: 0,
+    why: "(1/2)∫₀² 2x dx = (1/2)·4 = 2.",
+  },
+  {
+    m: 15,
+    q: "Longitud de arco:",
+    options: [
+      "\\int_a^b\\sqrt{1+(f')^2}\\,dx",
+      "\\int_a^b\\sqrt{1+f^2}\\,dx",
+      "\\int_a^b (1+f')\\,dx",
+      "\\pi\\int_a^b f^2\\,dx",
+    ],
+    a: 0,
+    why: "ds = √(1 + (dy/dx)²) dx.",
+  },
+  {
+    m: 15,
+    q: "Trabajo para estirar un resorte (k = 10) de 0 a 1 m:",
+    options: ["5\\text{ J}", "10\\text{ J}", "1\\text{ J}", "20\\text{ J}"],
+    a: 0,
+    why: "W = ∫₀¹ 10x dx = 5 J.",
+  },
+  // Módulo 16 — Sólidos de revolución
+  {
+    m: 16,
+    q: "Método de discos (giro en el eje x):",
+    options: [
+      "\\pi\\int_a^b R^2\\,dx",
+      "2\\pi\\int_a^b R\\,dx",
+      "\\int_a^b R^2\\,dx",
+      "\\pi\\int_a^b R\\,dx",
+    ],
+    a: 0,
+    why: "Cada disco tiene área πR(x)².",
+  },
+  {
+    m: 16,
+    q: "Si hay un hueco entre la región y el eje se usan…",
+    options: [T("arandelas"), T("discos"), T("trapecios"), T("rectángulos")],
+    a: 0,
+    why: "V = π∫(R² − r²) dx.",
+  },
+  {
+    m: 16,
+    q: "Método de capas cilíndricas:",
+    options: [
+      "2\\pi\\int_a^b p\\,h\\,dx",
+      "\\pi\\int_a^b p^2\\,dx",
+      "\\pi\\int_a^b h\\,dx",
+      "2\\int_a^b p\\,h\\,dx",
+    ],
+    a: 0,
+    why: "Cada capa: circunferencia 2πp por altura h por grosor dx.",
+  },
+  {
+    m: 16,
+    q: "y = √x, 0 ≤ x ≤ 4, gira en el eje x. Volumen:",
+    options: ["8\\pi", "4\\pi", "16\\pi", "2\\pi"],
+    a: 0,
+    why: "π∫₀⁴ x dx = π·8.",
+  },
+  {
+    m: 16,
+    q: "Volumen de una esfera de radio r:",
+    options: ["\\tfrac43\\pi r^3", "\\pi r^2", "4\\pi r^2", "\\tfrac13\\pi r^3"],
+    a: 0,
+    why: "π∫₋ᵣʳ (r² − x²) dx = 4πr³/3.",
+  },
 ];
 
 export const MODULE_TITLES: Record<number, string> = {

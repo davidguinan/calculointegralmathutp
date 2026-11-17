@@ -88,6 +88,14 @@ export const BOSSES: BossDef[] = [
     color: "#eab308",
     patterns: ["aimed", "radial", "spiral", "rain", "burst"],
   },
+  {
+    name: "Arquitecto de Sólidos",
+    title: "Aplicaciones y sólidos (M15–M16)",
+    modules: [15, 16],
+    hp: 760,
+    color: "#3b82f6",
+    patterns: ["aimed", "radial", "spiral", "rain", "burst"],
+  },
 ];
 
 export type Input = {
