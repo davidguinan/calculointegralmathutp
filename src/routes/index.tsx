@@ -7,15 +7,15 @@ import { MODULES } from "@/modules/registry";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cálculo Integral UTP — 14 módulos interactivos y un juego" },
+      { title: "Cálculo Integral UTP — 16 módulos interactivos y un juego" },
       {
         name: "description",
         content:
-          "Curso interactivo de Cálculo Integral de la UTP: métodos numéricos, integral definida, sustitución, exponenciales, logaritmos, trigonométricas, inversas, trinomios e integración por partes.",
+          "Curso interactivo de Cálculo Integral de la UTP: métodos numéricos, integral definida, sustitución, exponenciales, logaritmos, trigonométricas, inversas, trinomios, integración por partes, aplicaciones y sólidos de revolución en 3D.",
       },
       {
         property: "og:title",
-        content: "Cálculo Integral UTP — 14 módulos interactivos y un juego",
+        content: "Cálculo Integral UTP — 16 módulos interactivos y un juego",
       },
       {
         property: "og:description",
@@ -58,7 +58,7 @@ function Index() {
             Cálculo Integral, aprendido con gráficas que puedes mover
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            14 módulos con teoría en notación matemática real, visualizadores interactivos y
+            16 módulos con teoría en notación matemática real, visualizadores interactivos y
             ejemplos resueltos paso a paso, cada uno con laboratorio y autoevaluación. Además, la
             Arena Integral: un juego de combate donde ganas poderes respondiendo preguntas.
           </p>

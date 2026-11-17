@@ -15,7 +15,9 @@ import { Modulo11 } from "@/modules/m11-trig-inversas/Modulo11";
 import { Modulo12 } from "@/modules/m12-hiperbolicas-inversas/Modulo12";
 import { Modulo13 } from "@/modules/m13-trinomio/Modulo13";
 import { Modulo14 } from "@/modules/m14-por-partes/Modulo14";
-import { Modulo15 } from "@/modules/m15-arena/Modulo15";
+import { Modulo15 } from "@/modules/m15-aplicaciones/Modulo15";
+import { Modulo16 } from "@/modules/m16-solidos/Modulo16";
+import { Modulo17 } from "@/modules/m17-arena/Modulo17";
 
 export const Route = createFileRoute("/modulo/$slug")({
   loader: ({ params }) => {
@@ -59,6 +61,8 @@ const CONTENT: Record<number, () => React.JSX.Element> = {
   13: Modulo13,
   14: Modulo14,
   15: Modulo15,
+  16: Modulo16,
+  17: Modulo17,
 };
 
 function ModuloRoute() {

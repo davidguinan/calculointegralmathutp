@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Cálculo Integral UTP" },
       {
         property: "og:description",
-        content: "14 módulos interactivos de Cálculo Integral con visualizadores y KaTeX.",
+        content: "16 módulos interactivos de Cálculo Integral con visualizadores y KaTeX.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
