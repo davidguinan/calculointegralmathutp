@@ -29,7 +29,7 @@ export function Shell({ children }: { children: ReactNode }) {
       <main className="flex-1">{children}</main>
       <footer className="border-t border-border py-8">
         <div className="mx-auto max-w-6xl px-4 text-sm text-muted-foreground sm:px-6">
-          Plataforma educativa de Cálculo Integral · UTP · 14 módulos
+          Plataforma educativa de Cálculo Integral · UTP · 16 módulos
         </div>
       </footer>
     </div>
