@@ -123,9 +123,26 @@ export const MODULES: ModuleMeta[] = [
   },
   {
     id: 15,
+    slug: "aplicaciones-de-la-integral",
+    title: "Aplicaciones de la Integral",
+    summary: "Área entre curvas, valor promedio, longitud de arco y trabajo.",
+    tags: ["aplicaciones", "área", "longitud de arco", "trabajo"],
+    status: "activo",
+  },
+  {
+    id: 16,
+    slug: "solidos-de-revolucion",
+    title: "Sólidos de Revolución (3D)",
+    summary:
+      "Volúmenes por discos, arandelas y capas cilíndricas con gráficas 3D que puedes girar.",
+    tags: ["volumen", "sólidos", "discos", "arandelas", "capas", "3D"],
+    status: "activo",
+  },
+  {
+    id: 17,
     slug: "arena-integral",
     title: "Arena Integral (juego)",
-    summary: "Combate en tiempo real: responde preguntas de los 14 módulos para ganar poderes.",
+    summary: "Combate en tiempo real: responde preguntas de los 16 módulos para ganar poderes.",
     tags: ["juego", "repaso", "2 jugadores"],
     status: "activo",
   },
