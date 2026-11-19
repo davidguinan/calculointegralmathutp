@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Sigma } from "lucide-react";
+import { Box, Sigma } from "lucide-react";
 import type { ReactNode } from "react";
 
 export function Shell({ children }: { children: ReactNode }) {
@@ -18,12 +18,21 @@ export function Shell({ children }: { children: ReactNode }) {
               </span>
             </span>
           </Link>
-          <Link
-            to="/"
-            className="rounded-md border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-secondary"
-          >
-            Módulos
-          </Link>
+          <nav className="flex items-center gap-2">
+            <Link
+              to="/calculadora-3d"
+              className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              <Box className="size-4" />
+              <span className="hidden sm:inline">Calculadora</span> 3D
+            </Link>
+            <Link
+              to="/"
+              className="rounded-md border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:bg-secondary"
+            >
+              Módulos
+            </Link>
+          </nav>
         </div>
       </header>
       <main className="flex-1">{children}</main>
