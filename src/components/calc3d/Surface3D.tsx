@@ -116,6 +116,8 @@ export function Surface3D({ opts }: { opts: SurfaceOptions }) {
     const cv = canvasRef.current;
     if (!cv) return;
     const onWheel = (e: WheelEvent) => {
+      // Solo con Ctrl/⌘ (o pellizco en trackpad): así la rueda sigue desplazando la página.
+      if (!e.ctrlKey && !e.metaKey) return;
       e.preventDefault();
       setView((v) => ({
         ...v,
@@ -491,7 +493,7 @@ export function Surface3D({ opts }: { opts: SurfaceOptions }) {
         style={{ width: "100%", height: size.h, touchAction: "none" }}
         className="cursor-grab rounded-xl border border-border bg-card active:cursor-grabbing"
         role="img"
-        aria-label="Gráfica 3D de la superficie z = f(x, y). Arrastra para girar y usa la rueda para acercar."
+        aria-label="Gráfica 3D de la superficie z = f(x, y). Arrastra para girar y usa Ctrl + rueda para acercar."
         onPointerDown={(ev) => {
           (ev.target as HTMLCanvasElement).setPointerCapture(ev.pointerId);
           pinch.current.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
@@ -533,7 +535,7 @@ export function Surface3D({ opts }: { opts: SurfaceOptions }) {
         }}
       />
       <div className="mt-2 flex flex-wrap items-center justify-between gap-2 text-xs text-muted-foreground">
-        <span>Arrastra para girar · rueda o pellizco para acercar.</span>
+        <span>Arrastra para girar · Ctrl + rueda o pellizco para acercar.</span>
         <span className="flex flex-wrap gap-1.5">
           <button
             className={btn}
