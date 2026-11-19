@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Calculadora3dRouteImport } from './routes/calculadora-3d'
 import { Route as ModuloSlugRouteImport } from './routes/modulo.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Calculadora3dRoute = Calculadora3dRouteImport.update({
+  id: '/calculadora-3d',
+  path: '/calculadora-3d',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModuloSlugRoute = ModuloSlugRouteImport.update({
@@ -25,27 +31,31 @@ const ModuloSlugRoute = ModuloSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/calculadora-3d': typeof Calculadora3dRoute
   '/modulo/$slug': typeof ModuloSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/calculadora-3d': typeof Calculadora3dRoute
   '/modulo/$slug': typeof ModuloSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/calculadora-3d': typeof Calculadora3dRoute
   '/modulo/$slug': typeof ModuloSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/modulo/$slug'
+  fullPaths: '/' | '/calculadora-3d' | '/modulo/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/modulo/$slug'
-  id: '__root__' | '/' | '/modulo/$slug'
+  to: '/' | '/calculadora-3d' | '/modulo/$slug'
+  id: '__root__' | '/' | '/calculadora-3d' | '/modulo/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Calculadora3dRoute: typeof Calculadora3dRoute
   ModuloSlugRoute: typeof ModuloSlugRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/calculadora-3d': {
+      id: '/calculadora-3d'
+      path: '/calculadora-3d'
+      fullPath: '/calculadora-3d'
+      preLoaderRoute: typeof Calculadora3dRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/modulo/$slug': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Calculadora3dRoute: Calculadora3dRoute,
   ModuloSlugRoute: ModuloSlugRoute,
 }
 export const routeTree = rootRouteImport
