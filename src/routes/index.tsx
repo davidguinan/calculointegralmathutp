@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { ArrowRight, BookOpen, Clock, Search, Sparkles, Swords } from "lucide-react";
+import { ArrowRight, BookOpen, Box, Clock, Search, Sparkles, Swords } from "lucide-react";
 import { Shell } from "@/components/site/Shell";
 import { MODULES } from "@/modules/registry";
 
@@ -82,6 +82,12 @@ function Index() {
               className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-accent-foreground transition-opacity hover:opacity-90"
             >
               <Swords className="size-4" /> Jugar Arena Integral
+            </Link>
+            <Link
+              to="/calculadora-3d"
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-5 py-2.5 text-sm font-semibold hover:bg-secondary"
+            >
+              <Box className="size-4" /> Calculadora 3D
             </Link>
           </div>
         </div>
